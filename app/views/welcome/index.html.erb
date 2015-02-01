@@ -1,2 +1,26 @@
-<h1>IFTA Payments</h1>
-index.html.erb
+<h1>IFTA Conference Payments</h1>
+
+<p>Please remember to go into the <a href="http://www.ifta-conference.org" target="_blank">conference system</a> and add the ordered items to the user's cart and mark them as paid. This interface only exists to facilitate payments taken outside the US.</p>
+
+<form action="/submit" method="post">
+
+  <label for="amount">Amount to Charge in Dollars</label>
+  <input name="amount" type="text" />
+
+  <label for="cc_name">Cardholder Name</label>
+  <input name="cc_name" type="text" />
+
+  <label for="cc_number">Credit Card Number</label>
+  <input name="cc_number" type="text" />
+
+  <label for="cc_month">Expiration Month</label>
+  <input name="cc_month" type="text" />
+
+  <label for="cc_year">Expiration Year</label>
+  <input name="cc_year" type="text" />
+
+  <label for="cc_cvv">CVV</label>
+  <input name="cc_cvv" type="text" />
+
+  <input type="submit" value="Charge Card" />
+</form>

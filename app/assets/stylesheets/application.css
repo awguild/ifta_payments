@@ -16,3 +16,17 @@
 
  *= require foundation
  */
+
+.container {
+  width: 60em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container input,
+.container input[type="date"],
+.container input[type="text"] {
+  width: 15em;
+  height: 3em;
+  font-size: .7em;
+}
