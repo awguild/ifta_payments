@@ -29,6 +29,7 @@ gem 'thin'
 gem 'foundation-rails', '5.4.5'
 gem 'paypal-sdk-rest'
 gem 'dotenv-rails'
+gem 'certified'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
