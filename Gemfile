@@ -28,7 +28,7 @@ gem 'spring',        group: :development
 gem 'thin'
 gem 'foundation-rails', '5.4.5'
 gem 'paypal-sdk-rest'
-
+gem 'dotenv-rails'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

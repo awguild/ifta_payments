@@ -44,6 +44,11 @@ GEM
       thor (~> 0.19.1)
     daemons (1.1.9)
     docile (1.1.5)
+    dotenv (0.11.1)
+      dotenv-deployment (~> 0.0.2)
+    dotenv-deployment (0.0.2)
+    dotenv-rails (0.11.1)
+      dotenv (= 0.11.1)
     erubis (2.7.0)
     eventmachine (1.0.4)
     execjs (2.2.2)
@@ -149,6 +154,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 4.0.0)
+  dotenv-rails
   foundation-rails (= 5.4.5)
   jbuilder (~> 2.0)
   jquery-rails
