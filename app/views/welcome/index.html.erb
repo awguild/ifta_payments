@@ -3,24 +3,66 @@
 <p>Please remember to go into the <a href="http://www.ifta-conference.org" target="_blank">conference system</a> and add the ordered items to the user's cart and mark them as paid. This interface only exists to facilitate payments taken outside the US.</p>
 
 <form action="/submit" method="post">
+  <fieldset>
+    <legend>Charge Details</legend>
 
-  <label for="amount">Amount to Charge in Dollars</label>
-  <input name="amount" type="text" />
+    <label for="amount">Amount to Charge in Dollars</label>
+    <input name="amount" type="text" value="<%= params[:amount] %>" />
 
-  <label for="cc_name">Cardholder Name</label>
-  <input name="cc_name" type="text" />
+    <label for="description">Description</label>
+    <textarea name="description"><%= params[:description] %></textarea>
 
-  <label for="cc_number">Credit Card Number</label>
-  <input name="cc_number" type="text" />
+    <label for="first_name">Cardholder First Name</label>
+    <input name="first_name" type="text" value="<%= params[:first_name] %>" />
 
-  <label for="cc_month">Expiration Month</label>
-  <input name="cc_month" type="text" />
+    <label for="last_name">Cardholder Last Name</label>
+    <input name="last_name" type="text" value="<%= params[:last_name] %>" />
+  </fieldset>
 
-  <label for="cc_year">Expiration Year</label>
-  <input name="cc_year" type="text" />
+  <fieldset>
+    <legend>Billing Address</legend>
 
-  <label for="cc_cvv">CVV</label>
-  <input name="cc_cvv" type="text" />
+    <label for="line1">Address</label>
+    <input name="line1" type="text" value="<%= params[:line1] %>" />
+
+    <label for="city">City</label>
+    <input name="city" type="text" value="<%= params[:city] %>" />
+
+    <label for="state">State</label>
+    <input name="state" type="text" value="<%= params[:state] %>" />
+
+    <label for="postal_code">Postal Code</label>
+    <input name="postal_code" type="text" value="<%= params[:postal_code] %>" />
+
+    <label for="country_code">Country Code</label>
+    <input name="country_code" type="text" placeholder="US" value="<%= params[:country_code] %>" />
+  </fieldset>
+
+  <fieldset>
+    <legend>Card Info</legend>
+
+    <label for="cc_type">Card Type</label>
+    <select name="cc_type">
+      <option value="" <%=  blank_card_selected %>></option>
+      <option value="visa" <%=  visa_card_selected %>>Visa</option>
+      <option value="mastercard" <%=  mastercard_card_selected %>>MasterCard</option>
+      <option value="discover" <%=  discover_card_selected %>>Discover</option>
+      <option value="amex" <%=  amex_card_selected %>>American Express</option>
+    </select>
+
+    <label for="cc_number">Credit Card Number</label>
+    <input name="cc_number" type="text" value="<%= params[:cc_number] %>" />
+
+    <label for="cc_month">Expiration Month</label>
+    <input name="cc_month" type="text" value="<%= params[:cc_month] %>" />
+
+    <label for="cc_year">Expiration Year</label>
+    <input name="cc_year" type="text" value="<%= params[:cc_year] %>" />
+
+    <label for="cc_cvv">CVV</label>
+    <input name="cc_cvv" type="text" value="<%= params[:cc_cvv] %>" />
+  </fieldset>
+  
 
   <input type="submit" value="Charge Card" />
 </form>
